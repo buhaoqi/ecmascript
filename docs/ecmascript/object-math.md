@@ -1,0 +1,1 @@
+The Math.abs() function returns the absolute value of a number.
