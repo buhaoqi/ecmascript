@@ -189,31 +189,108 @@ Enables you to cancel a callback previously scheduled with Window.requestAnimati
 - `?q=baz`: 查询
 - `#bang`: hash
 
-### 查询url地址
+### 查询url相关信息
 -  `Location.href`: 返回与文档相关联的url地址(字符串类型）。
 
-### 查询协议
+示例:新浪网404自动跳转首页
+```html
+<p></p>
+    <script>
+        const p = document.querySelector('p')
+        let timer = null
+        let n = 5
+        timer = window.setInterval(function(){
+            if(n == 0){
+                window.location.href = `http://www.sina.com.cn`
+                clearInterval(timer)
+            }
+            p.innerHTML = `您将在${n}秒钟后跳转到首页`
+            n--
+        },1000)
+    </script>
+```
+
 - `Location.protocol`: 是一个包含 URL 协议方案的 USVString，包括最后的 ':'
-
-### 查询主机
 - `Location.host`:是一个包含主机的 USVString，即主机名、':' 和 URL 的端口
-
-### 查询主机名
 - `Location.hostname` - 是一个包含 URL 域的 USVString
-### 查询端口号
 - `Location.port` - 是一个包含 URL 端口号的 USVString
-### 查询路径
 - `Location.pathname` - 一个包含初始 '/' 后跟 URL 路径的 USVString，不包括查询字符串或片段
-### 查询查询字符串
 - `Location.search` - USVString 是否包含“？”后跟 URL 的参数或“查询字符串”。现代浏览器提供 URLSearchParams 和 URL.searchParams 以便于从查询字符串中解析出参数
-### 查询hash
+
+示例：登录跳转：login.html
+```html
+<label for="username">Username</label>
+    <input type="text" id="username" spellcheck="false">
+    <label for="password">Password</label>
+    <input type="password" id="password">
+    <button type="submit" id="btn-submit">Login</button>
+    <script>
+        const oInput1 = document.getElementById('username')
+        const oInput2 = document.getElementById('password')
+        const oBtn = document.getElementById('btn-submit')
+        oBtn.addEventListener('click', function () {
+            location.href = `index.html?username=${oInput1.value}&password=${oInput2.value}`
+        })
+    </script>
+
+```
+登录跳转：index.html
+```html
+<p></p>
+    <script>
+        const oP = document.querySelector('p')
+        const params = location.search.substr(1)
+		let params_arr = params.split('&');
+        let str = ''
+        console.log(params_arr)
+		for(let i = 0; i < params_arr.length; i++) {
+			let pair = params_arr[i].split('=');
+			str += `${pair[0]}: ${pair[1]}  `
+		}
+        oP.innerHTML = str
+    </script>
+```
+
 - `Location.hash`- 是一个包含“#”的 USVString，后跟 URL 的片段标识符
-### 替换URL
 - `Location.assign()`- 根据参数中提供的 URL 加载资源
-### 重载URL
+
+示例：assign()跳转
+```html
+<script>
+    document.querySelector('button').addEventListener('click',function(){
+        window.location.assign('http://www.baidu.com')
+    })
+</script>
+```
 - `Location.reload()`- 重新加载当前 URL，如刷新按钮
-### 替换URL
+
+示例：重载页面
+```html
+<script>
+    document.querySelector('button').addEventListener('click',function(){
+        // window.location.replace('http://www.baidu.com')
+        location.reload()
+    })
+</script>
+```
+
 - `Location.replace()` - 用提供的 URL 替换当前资源（重定向到提供的 URL）。与 assign() 方法和设置 href 属性的区别在于，使用 replace() 后当前页面不会保存在 session History 中
+
+示例：replace()跳转
+```html
+ <script>
+    document.querySelector('button').addEventListener('click',function(){
+        window.location.replace('http://www.baidu.com')
+    })
+</script>
+```
+
+
+
+
+
+
+
 
 ## document对象
 - `Window.document` - Read only. Returns a reference to the document that the window contains.
@@ -234,6 +311,71 @@ Enables you to cancel a callback previously scheduled with Window.requestAnimati
 
 ## navigator对象
 `Navigator`接口表示用户代理的状态和身份。它允许脚本查询它并注册自己以进行某些活动。可以使用只读的 window.navigator 属性检索 Navigator 对象。
+
+示例：检测浏览器的方法
+```html
+<script>
+      let userAgent = navigator.userAgent;
+      let browser;
+      if(userAgent.match(/edg/i)){
+        browser = "edge";
+      }else if(userAgent.match(/firefox|fxios/i)){
+        browser = "firefox";
+      }else if(userAgent.match(/opr\//i)){
+        browser = "opera";
+      }else if(userAgent.match(/chrome|chromium|crios/i)){
+        browser = "chrome";
+      }else if(userAgent.match(/safari/i)){
+        browser = "safari";
+      }else{
+        alert("Other browser");
+      }
+      const logo = document.querySelector(`.logos .${browser}`);
+      if(logo){
+        logo.style.opacity = "1";
+      }
+    </script>
+```
+>检测手机浏览器，最简单的方法就是分析浏览器的 useragent 字符串，它包含了设备信息。JS 通过navigator.userAgent属性拿到这个字符串，只要里面包含mobi、android、iphone等关键字，就可以认定是移动设备。
+
+示例：检测手机浏览器
+
+```html
+<script>
+    //方法一
+        if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+            console.log('当前设备是移动设备')
+        } else {
+            console.log('当前不是移动设备')
+        }
+
+    // 方法二
+        if (
+            navigator.userAgent.match(/Mobi/i) ||
+            navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/iPhone/i)
+        ) {
+            console.log('当前设备是移动设备')
+        }else {
+            console.log('当前不是移动设备')
+        }
+    
+    //方法三：另一种方法是通过屏幕宽度，判断是否为手机。
+
+    if (window.screen.width < 500) { //window.screen对象返回用户设备的屏幕信息，该对象的width属性是屏幕宽度（单位为像素）
+        console.log('当前设备是移动设备') //如果屏幕宽度window.screen.width小于500像素，就认为是手机。
+
+    }
+
+    //方法四：是侦测屏幕方向，手机屏幕可以随时改变方向（横屏或竖屏），桌面设备做不到。window.orientation属性用于获取屏幕的当前方向，只有移动设备才有这个属性，桌面设备会返回undefined。
+    if (typeof window.orientation !== 'undefined') {
+       console.log('当前设备是移动设备')  //iPhone 的 Safari 浏览器不支持该属性。
+    }
+
+    </script>
+
+```
+
 
 - `Navigator.connection` Read only 
 Provides a NetworkInformation object containing information about the network connection of a device.
@@ -357,3 +499,7 @@ Screen接口代表一个屏幕，通常是当前窗口正在渲染的那个屏�
 - `Screen.lockOrientation` - 锁定屏幕方向（仅适用于全屏或已安装的应用程序）
 - `Screen.unlockOrientation` - 解锁屏幕方向（仅适用于全屏或已安装的应用程序）
 
+
+## 资料
+
+[阮一峰手机检测方法](https://www.ruanyifeng.com/blog/2021/09/detecting-mobile-browser.html)

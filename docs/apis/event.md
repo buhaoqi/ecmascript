@@ -1,38 +1,69 @@
-## DOM事件基础
-事件是什么
-事件类型
-事件目标
-事件处理程序
-事件对象
-事件传播
-## DOM事件深入
-设置JS对象属性为事件处理程序
 
-设置HTML标签属性为事件处理程序
-## load
-加载整个页面时触发 load 事件，包括所有依赖资源，例如样式表和图像。
+
+
+
+## UiEvent
+
+### load
+- 定义：文档全部内容完全加载后触发 load 事件；
+- 文档全部内容包括：文字、文档依赖的外部资源，如：样式表、图像、视频等。
+- 语法格式
 
 ```html
+<element onload="myScript">
 <script>
-window.addEventListener('load', (event) => {
-  console.log('page is fully loaded');
-});
+object.onload = function(){myScript};
+</script>
+
 <script>
+object.addEventListener("load", myScript);
+</script>
+
 ```
+
+### DOMContentLoaded
+- 定义：DOMContentLoaded在页面 DOM 加载后立即触发，无需等待资源完成加载。
+- 区别：window load事件应该只用于检测一个完全加载的页面。在更多时候，推荐使用DOMContentLoaded event。
 
 ```html
+<h1>load event</h1>
+<p><img src="https://source.unsplash.com/random/1"></p>
+<p><img src="https://source.unsplash.com/random/2"></p>
+<p><img src="https://source.unsplash.com/random/3"></p>
+<p><img src="https://source.unsplash.com/random/4"></p>
+</p><img src="https://source.unsplash.com/random/5"></p>
+<p><img src="https://source.unsplash.com/random/6"></p>
+<p><img src="https://source.unsplash.com/random/7"></p>
+<p><img src="https://source.unsplash.com/random/8"></p>
+<p><img src="https://source.unsplash.com/random/9"></p>
+<p><img src="https://source.unsplash.com/random/10"></p>
+<p><img src="https://source.unsplash.com/random/11"></p>
 <script>
-window.onload = (event) => {
-  console.log('page is fully loaded');
-};
-<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        alert('DOM已加载完毕')
+    })
+    window.addEventListener('load',function(){
+        alert('图片、css文件已加载完毕')
+    })
+</script>
 ```
 
 
-## DOMContentLoaded
-DOMContentLoaded在页面 DOM 加载后立即触发，无需等待资源完成加载。
+### scroll
+- scroll: 当元素的滚动条被滚动时触发。
+- 语法格式
 
-## scroll
+```html
+<element onscroll="myScript">
+<script>
+object.onscroll = function(){myScript};
+</script>
+
+<script>
+object.addEventListener("scroll", myScript);
+</script>
+
+```
 
 ```html
 
@@ -120,8 +151,9 @@ DOMContentLoaded在页面 DOM 加载后立即触发，无需等待资源完成�
                 }
             }
     </script>
-
 </body>
-
 </html>
 ```
+
+### resize
+- resize: 当浏览器窗口尺寸改变时触发。
