@@ -124,6 +124,7 @@ nav:
     - Date: ecmascript/object-date.md
     - Math: ecmascript/object-math.md
     - RegExp: ecmascript/object-regexp.md
+    - Promise: ecmascript/object-promise.md
     - Error: ecmascript/object-error.md
   - APIs:
     - BOM: apis/bom.md

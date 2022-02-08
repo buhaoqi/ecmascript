@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dom" class="md-skip">
+        <a href="#uievent" class="md-skip">
           跳转至
         </a>
       
@@ -619,37 +619,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dom" class="md-nav__link">
-    DOM事件基础
+  <a href="#uievent" class="md-nav__link">
+    UiEvent
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dom_1" class="md-nav__link">
-    DOM事件深入
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="UiEvent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#load" class="md-nav__link">
     load
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#domcontentloaded" class="md-nav__link">
     DOMContentLoaded
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#scroll" class="md-nav__link">
     scroll
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resize" class="md-nav__link">
+    resize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -707,37 +713,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dom" class="md-nav__link">
-    DOM事件基础
+  <a href="#uievent" class="md-nav__link">
+    UiEvent
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dom_1" class="md-nav__link">
-    DOM事件深入
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="UiEvent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#load" class="md-nav__link">
     load
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#domcontentloaded" class="md-nav__link">
     DOMContentLoaded
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#scroll" class="md-nav__link">
     scroll
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resize" class="md-nav__link">
+    resize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -756,33 +768,62 @@
 
   <h1>Event</h1>
 
-<h2 id="dom">DOM事件基础<a class="headerlink" href="#dom" title="Permanent link">&para;</a></h2>
-<p>事件是什么
-事件类型
-事件目标
-事件处理程序
-事件对象
-事件传播</p>
-<h2 id="dom_1">DOM事件深入<a class="headerlink" href="#dom_1" title="Permanent link">&para;</a></h2>
-<p>设置JS对象属性为事件处理程序</p>
-<p>设置HTML标签属性为事件处理程序</p>
-<h2 id="load">load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h2>
-<p>加载整个页面时触发 load 事件，包括所有依赖资源，例如样式表和图像。</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  console.log(&#39;page is fully loaded&#39;);
-});
+<h2 id="uievent">UiEvent<a class="headerlink" href="#uievent" title="Permanent link">&para;</a></h2>
+<h3 id="load">load<a class="headerlink" href="#load" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义：文档全部内容完全加载后触发 load 事件；</li>
+<li>文档全部内容包括：文字、文档依赖的外部资源，如：样式表、图像、视频等。</li>
+<li>语法格式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">element</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;myScript&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  console.log(&#39;page is fully loaded&#39;);
-};
+<span class="nx">object</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">myScript</span><span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span> <span class="nx">myScript</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="domcontentloaded">DOMContentLoaded<a class="headerlink" href="#domcontentloaded" title="Permanent link">&para;</a></h2>
-<p>DOMContentLoaded在页面 DOM 加载后立即触发，无需等待资源完成加载。</p>
-<h2 id="scroll">scroll<a class="headerlink" href="#scroll" title="Permanent link">&para;</a></h2>
+<h3 id="domcontentloaded">DOMContentLoaded<a class="headerlink" href="#domcontentloaded" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义：DOMContentLoaded在页面 DOM 加载后立即触发，无需等待资源完成加载。</li>
+<li>区别：window load事件应该只用于检测一个完全加载的页面。在更多时候，推荐使用DOMContentLoaded event。</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>load event<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/1&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/2&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/3&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/4&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/5&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/6&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/7&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/8&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/9&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/10&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://source.unsplash.com/random/11&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;DOM已加载完毕&#39;</span><span class="p">)</span>
+    <span class="p">})</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;图片、css文件已加载完毕&#39;</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="scroll">scroll<a class="headerlink" href="#scroll" title="Permanent link">&para;</a></h3>
+<ul>
+<li>scroll: 当元素的滚动条被滚动时触发。</li>
+<li>语法格式</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">element</span> <span class="na">onscroll</span><span class="o">=</span><span class="s">&quot;myScript&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">onscroll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span><span class="nx">myScript</span><span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="nx">object</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;scroll&quot;</span><span class="p">,</span> <span class="nx">myScript</span><span class="p">);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 
@@ -867,11 +908,13 @@
                 <span class="p">}</span>
             <span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<h3 id="resize">resize<a class="headerlink" href="#resize" title="Permanent link">&para;</a></h3>
+<ul>
+<li>resize: 当浏览器窗口尺寸改变时触发。</li>
+</ul>
 
               
             </article>

@@ -149,6 +149,16 @@ Window.event  Read only
 Returns the current event, which is the event currently being handled by the JavaScript code's context, or undefined if no event is currently being handled. The Event object passed directly to event handlers should be used instead whenever possible.
 
 
+### window.orientation
+
+```html
+<script>
+//方法四：是侦测屏幕方向，手机屏幕可以随时改变方向（横屏或竖屏），桌面设备做不到。window.orientation属性用于获取屏幕的当前方向，只有移动设备才有这个属性，桌面设备会返回undefined。
+    if (typeof window.orientation !== 'undefined') {
+       console.log('当前设备是移动设备')  //iPhone 的 Safari 浏览器不支持该属性。
+    }
+</script>
+```
 
 ### 设置窗口聚焦
 Window.focus()
@@ -189,7 +199,7 @@ Enables you to cancel a callback previously scheduled with Window.requestAnimati
 - `?q=baz`: 查询
 - `#bang`: hash
 
-### 查询url相关信息
+### Location.href
 -  `Location.href`: 返回与文档相关联的url地址(字符串类型）。
 
 示例:新浪网404自动跳转首页
@@ -209,13 +219,48 @@ Enables you to cancel a callback previously scheduled with Window.requestAnimati
         },1000)
     </script>
 ```
+### location.replace()
+`Location.replace()` - 用提供的 URL 替换当前资源（重定向到提供的 URL）。与 assign() 方法和设置 href 属性的区别在于，使用 replace() 后当前页面不会保存在 session History 中
 
-- `Location.protocol`: 是一个包含 URL 协议方案的 USVString，包括最后的 ':'
-- `Location.host`:是一个包含主机的 USVString，即主机名、':' 和 URL 的端口
-- `Location.hostname` - 是一个包含 URL 域的 USVString
-- `Location.port` - 是一个包含 URL 端口号的 USVString
-- `Location.pathname` - 一个包含初始 '/' 后跟 URL 路径的 USVString，不包括查询字符串或片段
-- `Location.search` - USVString 是否包含“？”后跟 URL 的参数或“查询字符串”。现代浏览器提供 URLSearchParams 和 URL.searchParams 以便于从查询字符串中解析出参数
+示例：replace()跳转
+```html
+ <script>
+    document.querySelector('button').addEventListener('click',function(){
+        window.location.replace('http://www.baidu.com')
+    })
+</script>
+```
+### location.assign()
+
+- `Location.assign()`- 根据参数中提供的 URL 加载资源
+
+示例：assign()跳转
+```html
+<script>
+    document.querySelector('button').addEventListener('click',function(){
+        window.location.assign('http://www.baidu.com')
+    })
+</script>
+```
+
+### location.reload()
+
+`Location.reload()`- 重新加载当前 URL，如刷新按钮
+
+示例：重载页面
+```html
+<script>
+    document.querySelector('button').addEventListener('click',function(){
+        // window.location.replace('http://www.baidu.com')
+        location.reload()
+    })
+</script>
+```
+
+
+### location.search
+
+`Location.search` - USVString 是否包含“？”后跟 URL 的参数或“查询字符串”。现代浏览器提供 URLSearchParams 和 URL.searchParams 以便于从查询字符串中解析出参数
 
 示例：登录跳转：login.html
 ```html
@@ -251,66 +296,76 @@ Enables you to cancel a callback previously scheduled with Window.requestAnimati
     </script>
 ```
 
+
 - `Location.hash`- 是一个包含“#”的 USVString，后跟 URL 的片段标识符
-- `Location.assign()`- 根据参数中提供的 URL 加载资源
-
-示例：assign()跳转
-```html
-<script>
-    document.querySelector('button').addEventListener('click',function(){
-        window.location.assign('http://www.baidu.com')
-    })
-</script>
-```
-- `Location.reload()`- 重新加载当前 URL，如刷新按钮
-
-示例：重载页面
-```html
-<script>
-    document.querySelector('button').addEventListener('click',function(){
-        // window.location.replace('http://www.baidu.com')
-        location.reload()
-    })
-</script>
-```
-
-- `Location.replace()` - 用提供的 URL 替换当前资源（重定向到提供的 URL）。与 assign() 方法和设置 href 属性的区别在于，使用 replace() 后当前页面不会保存在 session History 中
-
-示例：replace()跳转
-```html
- <script>
-    document.querySelector('button').addEventListener('click',function(){
-        window.location.replace('http://www.baidu.com')
-    })
-</script>
-```
-
-
-
-
-
-
-
-
-## document对象
-- `Window.document` - Read only. Returns a reference to the document that the window contains.
+- `Location.protocol`: 是一个包含 URL 协议方案的 USVString，包括最后的 ':'
+- `Location.host`:是一个包含主机的 USVString，即主机名、':' 和 URL 的端口
+- `Location.hostname` - 是一个包含 URL 域的 USVString
+- `Location.port` - 是一个包含 URL 端口号的 USVString
+- `Location.pathname` - 一个包含初始 '/' 后跟 URL 路径的 USVString，不包括查询字符串或片段
 
 ## history对象
 `history`接口允许操作浏览器的的历史记录。
-### 获取历史记录对象
-- `window.history` - Returns a reference to the history object.
-### 查询历史记录对象的长度
-- `history.length` -  Read only. 返回一个表示会话历史中元素数量的整数，包括当前加载的页面。例如，对于在新选项卡中加载的页面，此属性返回 1
-### 后退一页
-- `history.back()` - 此异步方法转到会话历史记录中的上一页，与用户单击浏览器的后退按钮时的操作相同。等价于 history.go(-1)
-### 前进一页
-- `history.forward()` - 这个异步方法转到会话历史中的下一页，与用户单击浏览器的前进按钮时的操作相同；这相当于 history.go(1)
-### 跳转到指定页面
-- `history.go()` - 从会话历史记录中异步加载页面，由其与当前页面的相对位置标识，例如 -1 表示上一页或 1 表示下一页。如果您指定一个超出范围的值(例如，当会话历史记录中没有以前访问过的页面时指定 -1)这种方法静默没有效果。调用不带参数或值为 0 的 go() 会重新加载当前页面。 Internet Explorer 允许您指定字符串而不是整数，以转到历史列表中的特定 URL。
 
+### window.history
+ `window.history` - Returns a reference to the history object.获取历史记录对象。
+
+### history.length
+
+`history.length` - 查询历史记录对象的长度。 Read only. 
+- 参数：无
+- 返回值：返回一个表示会话历史中元素数量的整数，包括当前加载的页面。例如，对于在新选项卡中加载的页面，此属性返回 1
+
+### history.back()
+
+后退一页 此异步方法转到会话历史记录中的上一页，与用户单击浏览器的后退按钮时的操作相同。等价于 history.go(-1)
+- 参数：无
+- 返回值：无
+
+### history.forward()
+
+前进一页。这个异步方法转到会话历史中的下一页，与用户单击浏览器的前进按钮时的操作相同；这相当于 history.go(1)
+- 参数：无
+- 返回值：无
+
+### history.go()
+
+跳转到指定页面。从会话历史记录中异步加载页面，由其与当前页面的相对位置标识，例如 -1 表示上一页或 1 表示下一页。如果您指定一个超出范围的值(例如，当会话历史记录中没有以前访问过的页面时指定 -1)这种方法静默没有效果。调用不带参数或值为 0 的 go() 会重新加载当前页面。 Internet Explorer 允许您指定字符串而不是整数，以转到历史列表中的特定 URL。
+- 参数：整数
+- 返回值：无
+
+示例：历史记录跳转
+
+```html
+<p>历史记录中有<span></span>条记录</p>
+<button>后退</button> <button>前进</button>  <button>跳转到</button><input type="text">
+<script>
+    console.log(window.history)
+    const btn1 = document.querySelectorAll('button')[0]
+    const btn2 = document.querySelectorAll('button')[1]
+    const btn3 = document.querySelectorAll('button')[2]
+    const input = document.querySelector('input')
+    const span = document.querySelector('span')
+    btn1.addEventListener('click',function(){
+        history.back()
+    })
+
+    btn2.addEventListener('click',function(){
+        history.forward()
+    })
+
+    btn3.addEventListener('click',function(){
+        console.log(input.value*1)
+        history.go(input.value*1) 
+    })
+    span.innerHTML = history.length
+</script>
+```
 
 ## navigator对象
 `Navigator`接口表示用户代理的状态和身份。它允许脚本查询它并注册自己以进行某些活动。可以使用只读的 window.navigator 属性检索 Navigator 对象。
+
+### navigator.userAgent
 
 示例：检测浏览器的方法
 ```html
@@ -359,23 +414,10 @@ Enables you to cancel a callback previously scheduled with Window.requestAnimati
         }else {
             console.log('当前不是移动设备')
         }
-    
-    //方法三：另一种方法是通过屏幕宽度，判断是否为手机。
-
-    if (window.screen.width < 500) { //window.screen对象返回用户设备的屏幕信息，该对象的width属性是屏幕宽度（单位为像素）
-        console.log('当前设备是移动设备') //如果屏幕宽度window.screen.width小于500像素，就认为是手机。
-
-    }
-
-    //方法四：是侦测屏幕方向，手机屏幕可以随时改变方向（横屏或竖屏），桌面设备做不到。window.orientation属性用于获取屏幕的当前方向，只有移动设备才有这个属性，桌面设备会返回undefined。
-    if (typeof window.orientation !== 'undefined') {
-       console.log('当前设备是移动设备')  //iPhone 的 Safari 浏览器不支持该属性。
-    }
 
     </script>
 
 ```
-
 
 - `Navigator.connection` Read only 
 Provides a NetworkInformation object containing information about the network connection of a device.
@@ -487,6 +529,22 @@ Causes vibration on devices with support for it. Does nothing if vibration suppo
 ## screen对象
 Screen接口代表一个屏幕，通常是当前窗口正在渲染的那个屏幕，使用window.screen获取。请注意，浏览器通过检测哪个屏幕具有浏览器窗口的中心来确定将哪个屏幕报告为当前屏幕。
 
+### window.screen
+
+示例：查询手机设备
+```html
+<script>
+//方法三：另一种方法是通过屏幕宽度，判断是否为手机。
+
+    if (window.screen.width < 500) { //window.screen对象返回用户设备的屏幕信息，该对象的width属性是屏幕宽度（单位为像素）
+        console.log('当前设备是移动设备') //如果屏幕宽度window.screen.width小于500像素，就认为是手机。
+
+    }
+</script>
+```
+
+
+
 ### 查询屏幕可用空间
 - `Screen.availHeight` - 指定屏幕的高度，以像素为单位，减去操作系统显示的永久或半永久用户界面功能，例如 Windows 上的任务栏。
 - `Screen.availWidth`- 返回窗口可用的水平空间量。 
@@ -498,6 +556,10 @@ Screen接口代表一个屏幕，通常是当前窗口正在渲染的那个屏�
 ### 锁定屏幕方向
 - `Screen.lockOrientation` - 锁定屏幕方向（仅适用于全屏或已安装的应用程序）
 - `Screen.unlockOrientation` - 解锁屏幕方向（仅适用于全屏或已安装的应用程序）
+
+
+## document对象
+- `Window.document` - Read only. Returns a reference to the document that the window contains.
 
 
 ## 资料
