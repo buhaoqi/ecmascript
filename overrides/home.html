@@ -1,9 +1,8 @@
 {#- This file was automatically generated - do not edit -#}
 {% extends "main.html" %}
 {% block tabs %}
-  {{ super() }}
-  <style>
-
+{{ super() }}
+<style>
     .md-main {
         flex-grow: 0
     }
@@ -15,7 +14,7 @@
 
     .tx-container {
         padding-top: .0rem;
-        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg,47%,55%,1) 99%,#fff 99%)
+        background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(160deg, 47%, 55%, 1) 99%, #fff 99%)
     }
 
     .tx-hero {
@@ -35,10 +34,10 @@
         margin: 0 auto;
     }
 
-    .tx-hero__image{
-        width:17rem;
-        height:17rem;
-        order:1;
+    .tx-hero__image {
+        width: 17rem;
+        height: 17rem;
+        order: 1;
         padding-right: 2.5rem;
     }
 
@@ -219,21 +218,22 @@
 <!-- Main site Entry button descriptions -->
 <section class="tx-container">
     <div class="md-grid md-typeset">
-      <div class="tx-hero">
-        <div class="tx-hero__image">
-          <img src="assets/product-layers.png" draggable="false">
+        <div class="tx-hero">
+            <div class="tx-hero__image">
+                <img src="assets/product-layers.png" draggable="false">
+            </div>
+            <div class="tx-hero__content">
+                <h1>BUHAOQI IS IMPOSSIABLE.</h1>
+                <p>珍惜时间，从现在开始；把时间花在学习上，是我做过的事情中最不后悔的事情。想做就做，什么时候开始都不晚。</p>
+                <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}"
+                    class="md-button md-button--primary">
+                    学设计
+                </a>
+                <a href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button">
+                    学编程
+                </a>
+            </div>
         </div>
-        <div class="tx-hero__content">
-          <h1>BUHAOQI IS IMPOSSIABLE.</h1>
-          <p>珍惜时间，从现在开始；把时间花在学习上，是我做过的事情中最不后悔的事情。想做就做，什么时候开始都不晚。</p>
-          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary">
-            学设计
-          </a>
-          <a href="{{ config.repo_url }}" title="{{ lang.t('source.link.title') }}" class="md-button">
-            学编程
-          </a>
-        </div>
-      </div>
     </div>
 </section>
 
@@ -247,7 +247,8 @@
             </svg>
             每天学习一点
         </h2>
-        <p>Full & easy access to UP42 via Python! Explore geospatial data sets, run workflows and generate actionable insights.</p>
+        <p>Full & easy access to UP42 via Python! Explore geospatial data sets, run workflows and generate actionable
+            insights.</p>
     </div>
     <div class="feature-item">
         <h2>
@@ -256,11 +257,17 @@
                     d="M16 17v2H2v-2s0-4 7-4 7 4 7 4m-3.5-9.5A3.5 3.5 0 109 11a3.5 3.5 0 003.5-3.5m3.44 5.5A5.32 5.32 0 0118 17v2h4v-2s0-3.63-6.06-4M15 4a3.39 3.39 0 00-1.93.59 5 5 0 010 5.82A3.39 3.39 0 0015 11a3.5 3.5 0 000-7z" />
             </svg>Python ecosystem
         </h2>
-        <p>Use UP42 functionality together with your preferred Python libraries! For data science, building webapps etc. </p>
+        <p>Use UP42 functionality together with your preferred Python libraries! For data science, building webapps etc.
+        </p>
     </div>
     <div class="feature-item">
         <h2>
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <path d="M20.4 14.5L16 10 4 20" />
+            </svg>
             Visualizations
         </h2>
         <p>Interactive maps & visualizations for datasets & workflow results. Ideal to use with Jupyter notebooks.</p>
@@ -276,878 +283,952 @@
 <!-- Custom narrow footer -->
 <div class="md-footer-meta__inner md-grid">
     <div class="md-footer-social">
-    <a class="md-footer-social__link" href="https://github.com/up42" rel="noopener" target="_blank" title="github.com">
-        <svg viewBox="0 0 480 512" xmlns="http://www.w3.org/2000/svg"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
-    </a>
-    <a class="md-footer-social__link" href="https://twitter.com/up42_" rel="noopener" target="_blank" title="twitter.com">
-        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
-    </a>
-    <a class="md-footer-social__link" href="https://www.linkedin.com/company/up42/" rel="noopener" target="_blank" title="www.linkedin.com">
-        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
-    </a>
-    <a class="md-footer-social__link" href="mailto:support@up42.com" rel="noopener" target="_blank" title="">
-        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>
-    </a>
+        <a class="md-footer-social__link" href="https://github.com/up42" rel="noopener" target="_blank"
+            title="github.com">
+            <svg viewBox="0 0 480 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z">
+                </path>
+            </svg>
+        </a>
+        <a class="md-footer-social__link" href="https://twitter.com/up42_" rel="noopener" target="_blank"
+            title="twitter.com">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+            </svg>
+        </a>
+        <a class="md-footer-social__link" href="https://www.linkedin.com/company/up42/" rel="noopener" target="_blank"
+            title="www.linkedin.com">
+            <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
+                </path>
+            </svg>
+        </a>
+        <a class="md-footer-social__link" href="mailto:support@up42.com" rel="noopener" target="_blank" title="">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                </path>
+            </svg>
+        </a>
     </div>
 </div>
 {% endblock %}
 {% block content %}
 <div class="md-content" data-md-component="content">
-  <article class="md-content__inner md-typeset">
+    <article class="md-content__inner md-typeset">
 
-      <h1 id="_1">
-          前端网址导航
-          <a class="headerlink" href="#_1" title="Permanent link">&para;</a>
-      </h1>
-      <h2 id="_2">
-          工具类
-          <a class="headerlink" href="#_2" title="Permanent link">&para;</a>
-      </h2>
-      <ul>
-          <li>
-              <strong>
-                  <a href="https://codepen.io/">CodePen.io</a>
-              </strong>
-              <code>在线代码编辑器</code>
-          </li>
-          <li>
-              <strong>
-                  <a href="https://jsfiddle.net">jsfiddle.net</a>
-              </strong>
-              <code>在线代码编辑器</code>
-              <code>被封</code>
-          </li>
-          <li>
-            <strong>
-                <a href="https://jsbin.com">jsbin.com</a>
-            </strong>
-            <code>在线代码编辑器</code>
-        </li>
-        <li>
-          <strong>
-              <a href="https://jsrun.net/">jsrun.net</a>
-          </strong>
-          <code>在线代码编辑器</code>
-          <code>国人</code>
-      </li>
-      <li>
-        <strong>
-            <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a>
-        </strong>
-        <code>免费API</code>
-    </li>
-      </ul>
-  </article>
+        <h1 id="_1">
+            前端网址导航
+            <a class="headerlink" href="#_1" title="Permanent link">&para;</a>
+        </h1>
+        <h2 id="_2">
+            工具类
+            <a class="headerlink" href="#_2" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://codepen.io/">CodePen.io</a>
+                </strong>
+                <code>在线代码编辑器</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://jsfiddle.net">jsfiddle.net</a>
+                </strong>
+                <code>在线代码编辑器</code>
+                <code>被封</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://jsbin.com">jsbin.com</a>
+                </strong>
+                <code>在线代码编辑器</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://jsrun.net/">jsrun.net</a>
+                </strong>
+                <code>在线代码编辑器</code>
+                <code>国人</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a>
+                </strong>
+                <code>免费API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://placeholder.typicode.com/">jsonplaceholder</a>
+                </strong>
+                <code>API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://placeholder.com/">https://placeholder.com/</a>
+                </strong>
+                <code>API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://developer.accuweather.com/">https://developer.accuweather.com/</a>
+                </strong>
+                <code>天气API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="">名字</a>
+                </strong>
+                <code>免费天气API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="">名字</a>
+                </strong>
+                <code>免费天气API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="">名字</a>
+                </strong>
+                <code>免费天气API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="">名字</a>
+                </strong>
+                <code>免费天气API</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="">名字</a>
+                </strong>
+                <code>免费天气API</code>
+            </li>
+        </ul>
+    </article>
 
-  <article class="md-content__inner md-typeset">
-      
-    <h1 id="_1">
-        设计师网址导航
-        <a class="headerlink" href="#_1" title="Permanent link">&para;</a>
-    </h1>
-    <h2 id="_2">
-        图库
-        <a class="headerlink" href="#_2" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://unsplash.com/">unsplash</a>
-            </strong>
-            <code>照片库</code>
-            <code>免费商用</code>
-            <code>高质量</code>
-            <code>数量多</code>
-            <code>无需注册</code>
-            <code>颜色筛选</code>
-            <code>方向筛选</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://pxhere.com/">pxhere</a>
-            </strong>
-            <code>照片库</code>
-            <code>免费商用</code>
-            <code>高质量</code>
-            <code>数量多</code>
-            <code>需注册</code>
-            <code>颜色筛选</code>
-            <code>方向筛选</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://pixabay.com/">pixabay</a>
-            </strong>
-            <code>照片库</code>
-            <code>插画库</code>
-            <code>免费商用</code>
-            <code>高质量</code>
-            <code>数量一般</code>
-            <code>无需注册</code>
-            <code>颜色筛选</code>
-            <code>方向筛选</code>
-            <code>支持中文</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://500px.com/">500px</a>
-            </strong>
-            <code>照片库</code>
-            <code>付费</code>
-            <code>免费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.reshot.com/">reshot</a>
-            </strong>
-            <code>照片库</code>
-            <code>限范围免费商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://burst.shopify.com/">burst</a>
-            </strong>
-            <code>照片库</code>
-            <code>免费商用</code>
-            <code>质量高</code>
-            <code>数量一般</code>
-            <code>无需注册</code>
-            <code>无筛选</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://kaboompics.com/">kaboompics</a>
-            </strong>
-            <code>照片库</code>
-            <code>免费商用</code>
-            <code>数量少</code>
-            <code>无需注册</code>
-            <code>颜色筛选</code>
-            <code>方向筛选</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://negativespace.co/">negativespace</a>
-            </strong>
-            <code>待补充</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.foodiesfeed.com/">foodiesfeed</a>
-            </strong>
-            <code>食品图库</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.lifeofpix.com/">lifeofpix</a>
-            </strong>
-            <code>待补充</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://freestocks.org/">freestocks</a>
-            </strong>
-            <code>速度慢</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://gratisography.com/">gratisography</a>
-            </strong>
-            <code>创意图库</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://magdeleine.co/">magdeleine</a>
-            </strong>
-            <code>精选免费照片库</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.ls.graphics/">ls</a>
-            </strong>
-            <code>样机</code>
-            <code>付费</code>
-            <code>免费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="http://www.clipartpanda.com/">clipartpanda</a>
-            </strong>
-        </li>
-    </ul>
-    <h2 id="png">
-        免抠PNG
-        <a class="headerlink" href="#png" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="http://www.51yuansu.com/">觅元素</a>
-            </strong>
-            <code>免费</code>
-            <code>付费</code>
-            <code>商用需谨慎</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.subpng.com/">subpng</a>
-            </strong>
-            <code>免费不可商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://pngimg.com/">pngimg</a>
-            </strong>
-            <code>免费不可商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.transparenttextures.com/">透明纹理</a>
-            </strong>
-            <code>免费</code>
-            <code>直接下载</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://yellowimages.com/images-360">yellowimages</a>
-            </strong>
-            <code>360度免抠</code>
-            <code>收费</code>
-        </li>
-        <li>
-            <a href="https://purepng.com/">https://purepng.com/</a>
-        </li>
-    </ul>
-    <h2 id="_3">
-        矢量图标
-        <a class="headerlink" href="#_3" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://www.iconfont.cn/collections/index">阿里巴巴矢量库</a>
-            </strong>
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://icons8.com/">icons8</a>
-            </strong>
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.flaticon.com/">flaticon</a>
-            </strong>
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.iconfinder.com/">iconfinder</a>
-            </strong>
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.drawkit.io/free-icons">drawkit</a>
-            </strong>
-            <code>免费商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="http://www.instantlogosearch.com/">instantlogosearch</a>
-            </strong>
-            <code>大公司的矢量LOGO</code>
-            <code>免费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.wordvectorlogo.com">wordvectorlogo</a>
-            </strong>
-            <code>大公司的矢量LOGO</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.drawkit.io/free-icons">drawkit</a>
-            </strong>
-            <code>免费商用</code>
-        </li>
-    </ul>
-    <h2 id="_4">
-        矢量插画
-        <a class="headerlink" href="#_4" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            **
-            <a href="https://undraw.co/illustrations">Undraw</a>
-             ** 
-            <code>免费商用</code>
-        </li>
-        <li>
-            **
-            <a href="https://www.iconfont.cn/illustrations/index">阿里巴巴矢量库</a>
-             ** 
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://icons8.com/illustrations">icons8</a>
-            </strong>
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://products.ls.graphics/paaatterns/">paaatterns</a>
-            </strong>
-            <code>免费商用</code>
-        </li>
-        <li>
-            **
-            <a href="https://isometric.online/">isometric</a>
-             ** 
-            <code>免费商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.glazestock.com/">glazestock</a>
-            </strong>
-            <code>免费商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://mixkit.co/free-stock-art/">mixkit</a>
-            </strong>
-            <code>限范围免费商用</code>
-            <code>质量高</code>
-            <code>数量少</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.humaaans.com/">humaaans</a>
-            </strong>
-            <code>自定义人物</code>
-            <code>免费商用</code>
-            <code>推荐</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://app.itg.digital/">itg</a>
-            </strong>
-            <code>自定义插画</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.opendoodles.com/">opendoodles</a>
-            </strong>
-            <code>免费商用</code>
-            <code>数量少</code>
-            <code>有特色</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://lukaszadam.com/illustrations">lukaszadam</a>
-            </strong>
-            <code>免费商用</code>
-            <code>质量高</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.drawkit.io/">drawkit</a>
-            </strong>
-            <code>免费商用</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.manypixels.co/gallery">manypixels</a>
-            </strong>
-            <code>免费商用</code>
-            <code>有特色</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://absurd.design/">absurd</a>
-            </strong>
-            <code>付费商用</code>
-            <code>风格荒谬</code>
-            <code>有特色</code>
-        </li>
-    </ul>
-    <h2 id="_5">
-        设计灵感
-        <a class="headerlink" href="#_5" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://huaban.com/">花瓣</a>
-            </strong>
-            <code>综合</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.zcool.com.cn/">站酷</a>
-            </strong>
-            <code>综合</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.uidsdc.com/">优设</a>
-            </strong>
-            <code>综合</code>
-        </li>
-        <li>
-            <strong>
-                <a href="http://www.uedna.com/">UE-DNA</a>
-            </strong>
-            <code>综合</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://pinterest.com/">pinterest</a>
-            </strong>
-            <code>综合</code>
-            <code>被禁</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://behance.net/">behance</a>
-            </strong>
-            <code>综合</code>
-            <code>被禁</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://dribbble.com/">dribbble</a>
-            </strong>
-            <code>综合</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://screenlane.com/">screenlane</a>
-            </strong>
-            <code>UI设计</code>
-            <code>分类较细</code>
-        </li>
-        <li>
-            <strong>
-                <a href="http://reeoo.com/">reeoo</a>
-            </strong>
-            <code>网页设计</code>
-            <code>APP设计</code>
-            <code>启动图标设计</code>
-            <code>免费资源下载</code>
-        </li>
-    </ul>
-    <h2 id="ui">
-        UI设计规范
-        <a class="headerlink" href="#ui" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://developer.apple.com/design/human-interface-guidelines/">人机交互指南</a>
-            </strong>
-            <code>苹果官网UI设计规范</code>
-            <code>Human Interface Guidelines</code>
-            <code>英文版</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://material.io/design">Material</a>
-            </strong>
-            <code>安卓官网UI设计规范</code>
-            <code>material</code>
-            <code>英文版</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.mdui.org/design/">mdui</a>
-            </strong>
-            <code>安卓UI设计规范</code>
-            <code>中文翻译版</code>
-            <a href="http://ui-patterns.com/explore">截屏</a>
-        </li>
-    </ul>
-    <h2 id="ui_1">
-        UI组件库
-        <a class="headerlink" href="#ui_1" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://developer.apple.com/design/resources/">苹果官网设计资源</a>
-            </strong>
-            <a href="https://devimages-cdn.apple.com/design/resources/download/iOS-14-Sketch.dmg">iOS-14-Sketch.dmg下载</a>
-            <a href="https://devimages-cdn.apple.com/design/resources/download/iOS-14-Photoshop.dmg">iOS-14-Photoshop.dmg下载</a>
-            <a href="https://devimages-cdn.apple.com/design/resources/download/iOS-14-AdobeXD.dmg">IOS-14-AdobeXD.dmg下载</a>
-        </li>
-        <li>
-            <strong>
-                <a href="https://material.io/resources">安卓官网设计资源</a>
-            </strong>
-            <a href="https://download.adobe.com/pub/adobe/xd/ui-kits/xd-material-design-light-and-dark-themes.zip">xd-material-design-light-and-dark-themes.zip下载</a>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.adobe.com/cn/products/xd/features/ui-kits.html">Adobe XD官网组件库</a>
-            </strong>
-            <code>各种免费组件库</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.adobe.com/cn/products/xd/features/ui-kits.html">Bootstrap 5组件库</a>
-            </strong>
-            <a href="https://download.adobe.com/pub/adobe/xd/ui-kits/xd-bootstrap-v.5-ui-kit.xd.zip">xd-bootstrap-v.5-ui-kit.xd.zip下载</a>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.ui8.net/">ui8</a>
-            </strong>
-            <code>各种UI源文件</code>
-            <code>付费</code>
-            <code>免费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://xdresources.co/">xdresources</a>
-            </strong>
-            <code>各种UI设计资源</code>
-            <code>付费</code>
-            <code>免费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://applypixels.com/">applypixels</a>
-            </strong>
-            <code>PS模板</code>
-            <code>AI模板</code>
-            <code>FIGMA模板</code>
-            <code>付费</code>
-            <code>免费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://psfiles.com/">psfiles</a>
-            </strong>
-            <code>免费PSD文件</code>
-            <code>各种印刷设计模板</code>
-            <code>UI模板</code>
-            <code>样机文件</code>
-            <code>笔刷</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://freebiesbug.com/">freebiesbug</a>
-            </strong>
-            <code>免费源文件</code>
-            <code>样机</code>
-            <code>sketch模板</code>
-            <code>网页模板</code>
-        </li>
-    </ul>
-    <h2 id="_6">
-        颜色
-        <a class="headerlink" href="#_6" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://material.io/resources/color">Material Design Color Tool </a>
-            </strong>
-             Create and share color palettes for your UI, and measure the accessibility of any color combination.
-        </li>
-        <li>
-            <strong>
-                <a href="https://uigradients.com/">uigradients</a>
-            </strong>
-            <code>渐变色板</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.palettable.io/">palettable</a>
-            </strong>
-            <code>根据喜好找配色</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.colordrop.io/">colordrop</a>
-            </strong>
-            <code>色板</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://color.adobe.com">adobe color</a>
-            </strong>
-            <code>Adobe</code>
-            <code>配色板</code>
-            <code>直接导入AI</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://colorhunt.co/">colorhunt</a>
-            </strong>
-            <code>配色板</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://brandcolors.net/">brandcolors</a>
-            </strong>
-            <code>世界大牌品牌色卡</code>
-        </li>
-        <li>
-            <strong>
-                <a href="http://colorlisa.com/">colorlisa</a>
-            </strong>
-            <code>来自艺术家的色板</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.boldwebdesign.com.au/colour-palettes/">boldwebdesign</a>
-            </strong>
-            <code>来自财富500强的品牌色板</code>
-            <code>LOGO汇总</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://colorsinspo.com/">colorsinspo</a>
-            </strong>
-            <code>配色板</code>
-            <code>渐变色板</code>
-            <code>品牌色</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://picular.co/">picular</a>
-            </strong>
-            <code>根据关键词找颜色</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://products.ls.graphics/mesh-gradients/">ls</a>
-            </strong>
-            <code>任意渐变库</code>
-            <code>免费</code>
-            <code>付费</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://colorable.jxnblk.com/">jxnblk</a>
-            </strong>
-            <code>调整文字与背景色的工具</code>
-        </li>
-    </ul>
-    <h2 id="articles">
-        Articles
-        <a class="headerlink" href="#articles" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://uxdesign.cc">uxdesign</a>
-            </strong>
-        </li>
-        <li>
-            <strong>
-                <a href="http://ui-patterns.com/">ui-patterns</a>
-            </strong>
-        </li>
-    </ul>
-    <h2 id="_7">
-        字体
-        <a class="headerlink" href="#_7" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://devimages-cdn.apple.com/design/resources/download/SF-Font-Pro.dmg">San Francisco Pro</a>
-            </strong>
-            <code>iOS, macOS, tvOS的默认英文字体</code>
-            <code>苹果官网下载</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://devimages-cdn.apple.com/design/resources/download/SF-Font-Compact.dmg">San Francisco Compact</a>
-            </strong>
-            <code>watchOS的默认英文字体</code>
-            <code>苹果官网下载</code>
-        </li>
-    </ul>
-    <h2 id="_8">
-        工具类
-        <a class="headerlink" href="#_8" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://eagle.cool/">eagle</a>
-            </strong>
-            <code>设计师的图片文件管理器</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.gaoding.com/">稿定设计</a>
-            </strong>
-            <code>在线设计神器</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://glitchart.io/">故障艺术图生成器</a>
-            </strong>
-            '可制作背景'
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.remove.bg/">remove</a>
-            </strong>
-            <code>免费去背</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://cn.screenresolution.org/">屏幕分辨率统计</a>
-            </strong>
-            <code>用户屏幕分辨率发展数据</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://tongji.baidu.com/research/site?source=index">百度统计</a>
-            </strong>
-            <code>网站数据</code>
-            <code>移动数据</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://mta.qq.com/mta/data/device">腾讯移动分析</a>
-            </strong>
-            <code>网站数据</code>
-            <code>移动数据</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.mydevice.io/">mydevice.io</a>
-            </strong>
-            <code>Useful reference for physical width/hight, CSS width/height, pixel ratio, physical ppi, and CSS ppi of various popular mobile and connected devices.</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://bigjpg.com/">放大图片</a>
-            </strong>
-            <code>在线无损放大图片</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.icoconverter.com/">ICO转换器</a>
-            </strong>
-            <code>在线转换ICO文件</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://www.icoconverter.com/">snipaste</a>
-            </strong>
-            <code>截图+贴图</code>
-            <code>win平台</code>
-            <code>免费</code>
-        </li>
-    </ul>
-    <h2 id="adobe">
-        Adobe官网教程
-        <a class="headerlink" href="#adobe" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/photoshop/user-guide.html">Photoshop用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/illustrator/user-guide.html">Illustrator用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/xd/user-guide.html">XD用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/indesign/user-guide.html">Indesign用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/premiere-pro/user-guide.html">Premiere Pro用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/after-effects/user-guide.html">After Effects用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/bridge/user-guide.html">Bridge用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/dimension/user-guide.html">Dimension用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/media-encoder/user-guide.html">Media Encoder用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://helpx.adobe.com/cn/fonts/user-guide.html">Adobe Fonts用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://help.myportfolio.com/">Portfolio用户指南</a>
-            </strong>
-            <code>官网教程</code>
-        </li>
-    </ul>
-    <h2 id="_9">
-        合成设计教程
-        <a class="headerlink" href="#_9" title="Permanent link">&para;</a>
-    </h2>
-    <ul>
-        <li>
-            <strong>
-                <a href="https://rafya.id/">rafya.id</a>
-            </strong>
-            <code>国外合成设计教程站</code>
-        </li>
-        <li>
-            <strong>
-                <a href="https://nemanjasekulic.com/">nemanjasekulic</a>
-            </strong>
-            <code>国外合成设计教程站</code>
-        </li>
-    </ul>
+    <article class="md-content__inner md-typeset">
 
-</article>
+        <h1 id="_1">
+            设计师网址导航
+            <a class="headerlink" href="#_1" title="Permanent link">&para;</a>
+        </h1>
+        <h2 id="_2">
+            图库
+            <a class="headerlink" href="#_2" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://unsplash.com/">unsplash</a>
+                </strong>
+                <code>照片库</code>
+                <code>免费商用</code>
+                <code>高质量</code>
+                <code>数量多</code>
+                <code>无需注册</code>
+                <code>颜色筛选</code>
+                <code>方向筛选</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://pxhere.com/">pxhere</a>
+                </strong>
+                <code>照片库</code>
+                <code>免费商用</code>
+                <code>高质量</code>
+                <code>数量多</code>
+                <code>需注册</code>
+                <code>颜色筛选</code>
+                <code>方向筛选</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://pixabay.com/">pixabay</a>
+                </strong>
+                <code>照片库</code>
+                <code>插画库</code>
+                <code>免费商用</code>
+                <code>高质量</code>
+                <code>数量一般</code>
+                <code>无需注册</code>
+                <code>颜色筛选</code>
+                <code>方向筛选</code>
+                <code>支持中文</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://500px.com/">500px</a>
+                </strong>
+                <code>照片库</code>
+                <code>付费</code>
+                <code>免费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.reshot.com/">reshot</a>
+                </strong>
+                <code>照片库</code>
+                <code>限范围免费商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://burst.shopify.com/">burst</a>
+                </strong>
+                <code>照片库</code>
+                <code>免费商用</code>
+                <code>质量高</code>
+                <code>数量一般</code>
+                <code>无需注册</code>
+                <code>无筛选</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://kaboompics.com/">kaboompics</a>
+                </strong>
+                <code>照片库</code>
+                <code>免费商用</code>
+                <code>数量少</code>
+                <code>无需注册</code>
+                <code>颜色筛选</code>
+                <code>方向筛选</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://negativespace.co/">negativespace</a>
+                </strong>
+                <code>待补充</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.foodiesfeed.com/">foodiesfeed</a>
+                </strong>
+                <code>食品图库</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.lifeofpix.com/">lifeofpix</a>
+                </strong>
+                <code>待补充</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://freestocks.org/">freestocks</a>
+                </strong>
+                <code>速度慢</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://gratisography.com/">gratisography</a>
+                </strong>
+                <code>创意图库</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://magdeleine.co/">magdeleine</a>
+                </strong>
+                <code>精选免费照片库</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.ls.graphics/">ls</a>
+                </strong>
+                <code>样机</code>
+                <code>付费</code>
+                <code>免费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="http://www.clipartpanda.com/">clipartpanda</a>
+                </strong>
+            </li>
+        </ul>
+        <h2 id="png">
+            免抠PNG
+            <a class="headerlink" href="#png" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="http://www.51yuansu.com/">觅元素</a>
+                </strong>
+                <code>免费</code>
+                <code>付费</code>
+                <code>商用需谨慎</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.subpng.com/">subpng</a>
+                </strong>
+                <code>免费不可商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://pngimg.com/">pngimg</a>
+                </strong>
+                <code>免费不可商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.transparenttextures.com/">透明纹理</a>
+                </strong>
+                <code>免费</code>
+                <code>直接下载</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://yellowimages.com/images-360">yellowimages</a>
+                </strong>
+                <code>360度免抠</code>
+                <code>收费</code>
+            </li>
+            <li>
+                <a href="https://purepng.com/">https://purepng.com/</a>
+            </li>
+        </ul>
+        <h2 id="_3">
+            矢量图标
+            <a class="headerlink" href="#_3" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://www.iconfont.cn/collections/index">阿里巴巴矢量库</a>
+                </strong>
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://icons8.com/">icons8</a>
+                </strong>
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.flaticon.com/">flaticon</a>
+                </strong>
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.iconfinder.com/">iconfinder</a>
+                </strong>
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.drawkit.io/free-icons">drawkit</a>
+                </strong>
+                <code>免费商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="http://www.instantlogosearch.com/">instantlogosearch</a>
+                </strong>
+                <code>大公司的矢量LOGO</code>
+                <code>免费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.wordvectorlogo.com">wordvectorlogo</a>
+                </strong>
+                <code>大公司的矢量LOGO</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.drawkit.io/free-icons">drawkit</a>
+                </strong>
+                <code>免费商用</code>
+            </li>
+        </ul>
+        <h2 id="_4">
+            矢量插画
+            <a class="headerlink" href="#_4" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                **
+                <a href="https://undraw.co/illustrations">Undraw</a>
+                **
+                <code>免费商用</code>
+            </li>
+            <li>
+                **
+                <a href="https://www.iconfont.cn/illustrations/index">阿里巴巴矢量库</a>
+                **
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://icons8.com/illustrations">icons8</a>
+                </strong>
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://products.ls.graphics/paaatterns/">paaatterns</a>
+                </strong>
+                <code>免费商用</code>
+            </li>
+            <li>
+                **
+                <a href="https://isometric.online/">isometric</a>
+                **
+                <code>免费商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.glazestock.com/">glazestock</a>
+                </strong>
+                <code>免费商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://mixkit.co/free-stock-art/">mixkit</a>
+                </strong>
+                <code>限范围免费商用</code>
+                <code>质量高</code>
+                <code>数量少</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.humaaans.com/">humaaans</a>
+                </strong>
+                <code>自定义人物</code>
+                <code>免费商用</code>
+                <code>推荐</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://app.itg.digital/">itg</a>
+                </strong>
+                <code>自定义插画</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.opendoodles.com/">opendoodles</a>
+                </strong>
+                <code>免费商用</code>
+                <code>数量少</code>
+                <code>有特色</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://lukaszadam.com/illustrations">lukaszadam</a>
+                </strong>
+                <code>免费商用</code>
+                <code>质量高</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.drawkit.io/">drawkit</a>
+                </strong>
+                <code>免费商用</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.manypixels.co/gallery">manypixels</a>
+                </strong>
+                <code>免费商用</code>
+                <code>有特色</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://absurd.design/">absurd</a>
+                </strong>
+                <code>付费商用</code>
+                <code>风格荒谬</code>
+                <code>有特色</code>
+            </li>
+        </ul>
+        <h2 id="_5">
+            设计灵感
+            <a class="headerlink" href="#_5" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://huaban.com/">花瓣</a>
+                </strong>
+                <code>综合</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.zcool.com.cn/">站酷</a>
+                </strong>
+                <code>综合</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.uidsdc.com/">优设</a>
+                </strong>
+                <code>综合</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="http://www.uedna.com/">UE-DNA</a>
+                </strong>
+                <code>综合</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://pinterest.com/">pinterest</a>
+                </strong>
+                <code>综合</code>
+                <code>被禁</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://behance.net/">behance</a>
+                </strong>
+                <code>综合</code>
+                <code>被禁</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://dribbble.com/">dribbble</a>
+                </strong>
+                <code>综合</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://screenlane.com/">screenlane</a>
+                </strong>
+                <code>UI设计</code>
+                <code>分类较细</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="http://reeoo.com/">reeoo</a>
+                </strong>
+                <code>网页设计</code>
+                <code>APP设计</code>
+                <code>启动图标设计</code>
+                <code>免费资源下载</code>
+            </li>
+        </ul>
+        <h2 id="ui">
+            UI设计规范
+            <a class="headerlink" href="#ui" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://developer.apple.com/design/human-interface-guidelines/">人机交互指南</a>
+                </strong>
+                <code>苹果官网UI设计规范</code>
+                <code>Human Interface Guidelines</code>
+                <code>英文版</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://material.io/design">Material</a>
+                </strong>
+                <code>安卓官网UI设计规范</code>
+                <code>material</code>
+                <code>英文版</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.mdui.org/design/">mdui</a>
+                </strong>
+                <code>安卓UI设计规范</code>
+                <code>中文翻译版</code>
+                <a href="http://ui-patterns.com/explore">截屏</a>
+            </li>
+        </ul>
+        <h2 id="ui_1">
+            UI组件库
+            <a class="headerlink" href="#ui_1" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://developer.apple.com/design/resources/">苹果官网设计资源</a>
+                </strong>
+                <a
+                    href="https://devimages-cdn.apple.com/design/resources/download/iOS-14-Sketch.dmg">iOS-14-Sketch.dmg下载</a>
+                <a
+                    href="https://devimages-cdn.apple.com/design/resources/download/iOS-14-Photoshop.dmg">iOS-14-Photoshop.dmg下载</a>
+                <a
+                    href="https://devimages-cdn.apple.com/design/resources/download/iOS-14-AdobeXD.dmg">IOS-14-AdobeXD.dmg下载</a>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://material.io/resources">安卓官网设计资源</a>
+                </strong>
+                <a
+                    href="https://download.adobe.com/pub/adobe/xd/ui-kits/xd-material-design-light-and-dark-themes.zip">xd-material-design-light-and-dark-themes.zip下载</a>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.adobe.com/cn/products/xd/features/ui-kits.html">Adobe XD官网组件库</a>
+                </strong>
+                <code>各种免费组件库</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.adobe.com/cn/products/xd/features/ui-kits.html">Bootstrap 5组件库</a>
+                </strong>
+                <a
+                    href="https://download.adobe.com/pub/adobe/xd/ui-kits/xd-bootstrap-v.5-ui-kit.xd.zip">xd-bootstrap-v.5-ui-kit.xd.zip下载</a>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.ui8.net/">ui8</a>
+                </strong>
+                <code>各种UI源文件</code>
+                <code>付费</code>
+                <code>免费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://xdresources.co/">xdresources</a>
+                </strong>
+                <code>各种UI设计资源</code>
+                <code>付费</code>
+                <code>免费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://applypixels.com/">applypixels</a>
+                </strong>
+                <code>PS模板</code>
+                <code>AI模板</code>
+                <code>FIGMA模板</code>
+                <code>付费</code>
+                <code>免费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://psfiles.com/">psfiles</a>
+                </strong>
+                <code>免费PSD文件</code>
+                <code>各种印刷设计模板</code>
+                <code>UI模板</code>
+                <code>样机文件</code>
+                <code>笔刷</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://freebiesbug.com/">freebiesbug</a>
+                </strong>
+                <code>免费源文件</code>
+                <code>样机</code>
+                <code>sketch模板</code>
+                <code>网页模板</code>
+            </li>
+        </ul>
+        <h2 id="_6">
+            颜色
+            <a class="headerlink" href="#_6" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://material.io/resources/color">Material Design Color Tool </a>
+                </strong>
+                Create and share color palettes for your UI, and measure the accessibility of any color combination.
+            </li>
+            <li>
+                <strong>
+                    <a href="https://uigradients.com/">uigradients</a>
+                </strong>
+                <code>渐变色板</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.palettable.io/">palettable</a>
+                </strong>
+                <code>根据喜好找配色</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.colordrop.io/">colordrop</a>
+                </strong>
+                <code>色板</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://color.adobe.com">adobe color</a>
+                </strong>
+                <code>Adobe</code>
+                <code>配色板</code>
+                <code>直接导入AI</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://colorhunt.co/">colorhunt</a>
+                </strong>
+                <code>配色板</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://brandcolors.net/">brandcolors</a>
+                </strong>
+                <code>世界大牌品牌色卡</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="http://colorlisa.com/">colorlisa</a>
+                </strong>
+                <code>来自艺术家的色板</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.boldwebdesign.com.au/colour-palettes/">boldwebdesign</a>
+                </strong>
+                <code>来自财富500强的品牌色板</code>
+                <code>LOGO汇总</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://colorsinspo.com/">colorsinspo</a>
+                </strong>
+                <code>配色板</code>
+                <code>渐变色板</code>
+                <code>品牌色</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://picular.co/">picular</a>
+                </strong>
+                <code>根据关键词找颜色</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://products.ls.graphics/mesh-gradients/">ls</a>
+                </strong>
+                <code>任意渐变库</code>
+                <code>免费</code>
+                <code>付费</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://colorable.jxnblk.com/">jxnblk</a>
+                </strong>
+                <code>调整文字与背景色的工具</code>
+            </li>
+        </ul>
+        <h2 id="articles">
+            Articles
+            <a class="headerlink" href="#articles" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://uxdesign.cc">uxdesign</a>
+                </strong>
+            </li>
+            <li>
+                <strong>
+                    <a href="http://ui-patterns.com/">ui-patterns</a>
+                </strong>
+            </li>
+        </ul>
+        <h2 id="_7">
+            字体
+            <a class="headerlink" href="#_7" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://devimages-cdn.apple.com/design/resources/download/SF-Font-Pro.dmg">San Francisco
+                        Pro</a>
+                </strong>
+                <code>iOS, macOS, tvOS的默认英文字体</code>
+                <code>苹果官网下载</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://devimages-cdn.apple.com/design/resources/download/SF-Font-Compact.dmg">San
+                        Francisco Compact</a>
+                </strong>
+                <code>watchOS的默认英文字体</code>
+                <code>苹果官网下载</code>
+            </li>
+        </ul>
+        <h2 id="_8">
+            工具类
+            <a class="headerlink" href="#_8" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://eagle.cool/">eagle</a>
+                </strong>
+                <code>设计师的图片文件管理器</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.gaoding.com/">稿定设计</a>
+                </strong>
+                <code>在线设计神器</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://glitchart.io/">故障艺术图生成器</a>
+                </strong>
+                '可制作背景'
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.remove.bg/">remove</a>
+                </strong>
+                <code>免费去背</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://cn.screenresolution.org/">屏幕分辨率统计</a>
+                </strong>
+                <code>用户屏幕分辨率发展数据</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://tongji.baidu.com/research/site?source=index">百度统计</a>
+                </strong>
+                <code>网站数据</code>
+                <code>移动数据</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://mta.qq.com/mta/data/device">腾讯移动分析</a>
+                </strong>
+                <code>网站数据</code>
+                <code>移动数据</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.mydevice.io/">mydevice.io</a>
+                </strong>
+                <code>Useful reference for physical width/hight, CSS width/height, pixel ratio, physical ppi, and CSS ppi of various popular mobile and connected devices.</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://bigjpg.com/">放大图片</a>
+                </strong>
+                <code>在线无损放大图片</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.icoconverter.com/">ICO转换器</a>
+                </strong>
+                <code>在线转换ICO文件</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://www.icoconverter.com/">snipaste</a>
+                </strong>
+                <code>截图+贴图</code>
+                <code>win平台</code>
+                <code>免费</code>
+            </li>
+        </ul>
+        <h2 id="adobe">
+            Adobe官网教程
+            <a class="headerlink" href="#adobe" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/photoshop/user-guide.html">Photoshop用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/illustrator/user-guide.html">Illustrator用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/xd/user-guide.html">XD用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/indesign/user-guide.html">Indesign用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/premiere-pro/user-guide.html">Premiere Pro用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/after-effects/user-guide.html">After Effects用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/bridge/user-guide.html">Bridge用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/dimension/user-guide.html">Dimension用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/media-encoder/user-guide.html">Media Encoder用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://helpx.adobe.com/cn/fonts/user-guide.html">Adobe Fonts用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://help.myportfolio.com/">Portfolio用户指南</a>
+                </strong>
+                <code>官网教程</code>
+            </li>
+        </ul>
+        <h2 id="_9">
+            合成设计教程
+            <a class="headerlink" href="#_9" title="Permanent link">&para;</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>
+                    <a href="https://rafya.id/">rafya.id</a>
+                </strong>
+                <code>国外合成设计教程站</code>
+            </li>
+            <li>
+                <strong>
+                    <a href="https://nemanjasekulic.com/">nemanjasekulic</a>
+                </strong>
+                <code>国外合成设计教程站</code>
+            </li>
+        </ul>
+
+    </article>
 
 
 
